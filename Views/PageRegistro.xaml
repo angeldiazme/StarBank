@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StarBank.Views.PageRegistro"
+             BackgroundColor="White"
+             NavigationPage.HasNavigationBar="False">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="70" Spacing="15" HorizontalOptions="Center" VerticalOptions="Center">
+
+            <!-- Título del banco -->
+            <Label Text="Bienvenido A"
+                 FontSize="28"
+                 FontAttributes="Bold"
+                 TextColor="DarkBlue"
+                 HorizontalTextAlignment="Center" />
+            <!-- Logo -->
+            <Image Source="Resources/Images/logostar.png" HeightRequest="250" />
+
+            <!-- Contenedor del formulario -->
+            <Frame BackgroundColor="White"
+                 CornerRadius="15"
+                 HasShadow="True"
+                 Padding="20">
+
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Sign Up"
+                           FontSize="20"
+                           FontAttributes="Bold"
+                           TextColor="Black"
+                           HorizontalTextAlignment="Center" />
+
+                    <!-- Campos del formulario -->
+                    <Entry Placeholder="Nombre y apellido"
+                           FontSize="16"
+                           TextColor="Black"
+                           PlaceholderColor="Gray" />
+
+                    <Entry Placeholder="Usuario"
+                           FontSize="16"
+                           TextColor="Black"
+                           PlaceholderColor="Gray" />
+
+                    <Entry Placeholder="Contraseña"
+                           FontSize="16"
+                           TextColor="Black"
+                           PlaceholderColor="Gray"
+                           IsPassword="True" />
+
+                    <!-- Botón de registro -->
+                    <Button Text="Registrar"
+                            FontSize="18"
+                            TextColor="White"
+                            BackgroundColor="LightBlue"
+                            CornerRadius="20"
+                            HeightRequest="50"
+                            HorizontalOptions="Fill" />
+                </VerticalStackLayout>
+            </Frame>
+            <!-- Enlace de regreso -->
+            <VerticalStackLayout Spacing="5" HorizontalOptions="Center">
+                <Label Text="¿Ya tienes cuenta?"
+                       FontSize="14"
+                       TextColor="Black"
+                       HorizontalTextAlignment="Center" />
+
+                <Label Text="Ingresar"
+                       FontSize="14"
+                       TextColor="DarkBlue"
+                       FontAttributes="Italic"
+                       HorizontalTextAlignment="Center" />
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
+

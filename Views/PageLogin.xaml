@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StarBank.Views.PageLogin"
+             BackgroundColor="White"
+             NavigationPage.HasNavigationBar="False">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="70" Spacing="15" HorizontalOptions="Center" VerticalOptions="Center">
+
+            <!-- Título del banco -->
+            <Label Text="BIENVENIDO A"
+                   FontSize="28"
+                   FontAttributes="Bold"
+                   TextColor="DarkBlue"
+                   HorizontalTextAlignment="Center" />
+
+            <!-- Logo -->
+            <Image Source="Resources/Images/logostar.png" HeightRequest="250" />
+
+            <!-- Contenedor del formulario -->
+            <Frame BackgroundColor="White"
+                   CornerRadius="15"
+                   HasShadow="True"
+                   Padding="20">
+
+                <VerticalStackLayout Spacing="10">
+                    <!-- Usuario -->
+                    <Entry x:Name="UsernameEntry"
+                           Placeholder="Usuario" 
+                           FontSize="16" 
+                           TextColor="Black" 
+                           PlaceholderColor="Gray" />
+
+                    <!-- Contraseña -->
+                    <Entry x:Name="PasswordEntry"
+                           Placeholder="Contraseña" 
+                           FontSize="16" 
+                           TextColor="Black" 
+                           PlaceholderColor="Gray"
+                           IsPassword="True" />
+
+                    <!-- Olvidó contraseña -->
+                    <Label Text="¿Olvidó su usuario y contraseña?"
+                           FontSize="14"
+                           TextColor="LightBlue"
+                           HorizontalOptions="End"
+                           FontAttributes="Italic" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Botón de Ingresar -->
+            <Button Text="Ingresar"
+                    FontSize="18"
+                    TextColor="Black"
+                    BackgroundColor="LightBlue"
+                    CornerRadius="20"
+                    HeightRequest="50"
+                    HorizontalOptions="Fill"
+                    Clicked="Button_Clicked"/>
+
+            <!-- Registro -->
+            <VerticalStackLayout Spacing="5" HorizontalOptions="Center">
+                <Label Text="¿Primera vez que ingresa?"
+                       FontSize="14"
+                       TextColor="Black"
+                       HorizontalTextAlignment="Center" />
+
+                <Label x:Name="lblRegistrarse"
+                       Text="Regístrese aquí"
+                       FontSize="14"
+                       TextColor="DarkBlue"
+                       FontAttributes="Italic"
+                       HorizontalTextAlignment="Center">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnRegisterLblRegistro" />
+                    </Label.GestureRecognizers>
+                </Label>
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
